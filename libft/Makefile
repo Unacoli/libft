@@ -1,36 +1,35 @@
-SRCS = *.c
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: nargouse <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/01/07 14:54:05 by nargouse          #+#    #+#              #
+#    Updated: 2021/01/07 16:48:38 by nargouse         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-BONUS = *_bonus.{c/h}
+NAME	= libft.a
+INCLUDES = ./
+CFLAGS	+= -Wall -Werror -Wextra
+SRC		=
+OBJ		= $(SRC:.c=.o)
+RM		= rm -f
 
-OBJS = ${SRCS:.c=.o}
+all:	$(NAME)
 
-NAME = libft.a
-
-CC = gcc
-
-RM = rm -f
-
-CFLAGS = -Wall -Wextra -Werror
-
-.c.o:
-	${CC} ${CFLAGS} -I includes/ -c $< -o ${<:.c=.o}
-
-${NAME}:	${OBJS}
-	ar rc ${NAME} ${OBJS}
-	ranlib ${NAME}
-
-all:	${NAME}
+$(NAME):
+	@gcc -g $(CFLAGS) -I $(INCLUDES) -c $(SRC)
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
 
 clean:
-		${RM} ${OBJS}
-
-make:
-
-make bonus:
+		${RM} ${OBJ}
 
 fclean:	clean
 		${RM} ${NAME}
 
 re:	fclean all
 
-.PHONY:	all clean fclean re make
+.PHONY:	all clean fclean re

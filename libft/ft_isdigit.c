@@ -6,9 +6,11 @@
 /*   By: nargouse <nargouse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 13:24:10 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/07 13:31:05 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/07 18:05:24 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(char c)
 {

@@ -6,13 +6,11 @@
 /*   By: nargouse <nargouse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 13:27:49 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/07 13:30:29 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/07 17:52:01 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char c);
-
-int	ft_isdigit(char c);
+#include "libft.h"
 
 int	ft_isalnum(char c)
 {

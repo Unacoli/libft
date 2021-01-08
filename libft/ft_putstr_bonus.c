@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putstr_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/07 17:38:36 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/08 17:55:03 by nargouse         ###   ########.fr       */
+/*   Created: 2021/01/08 17:55:10 by nargouse          #+#    #+#             */
+/*   Updated: 2021/01/08 17:56:45 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-
-int				ft_strlen(char *str);
-int				ft_isalpha(char c);
-int				ft_isdigit(char c);
-void			ft_putchar(char c);
-void			ft_putstr(char *str);
-void			*ft_bzero(void *s, size_t n);
-void			*ft_memset(void *s, int c, size_t n)
-
-typedef struct	s_list
+void	ft_putstr(char *str)
 {
-	void			*content;
-	struct s_list	*next;
-}				t_list;
+	int i;
 
-#endif
+	i = 0;
+	while (str[i])
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+}

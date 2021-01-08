@@ -6,8 +6,21 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 18:29:21 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/07 18:29:28 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/08 17:14:56 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	*ft_memset(void *s, int c, size_t n)
+{
+	int	i;
+
+	i = 0;
+	while (i < n)
+	{
+		s[i] = c;
+		i++;
+	}
+	return (s);
+}

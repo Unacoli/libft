@@ -6,8 +6,22 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 18:28:08 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/07 18:28:16 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/08 17:48:06 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	int	i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (s[i] == c)
+			return (s[i]);
+		i++;
+	}
+	return (NULL);
+}

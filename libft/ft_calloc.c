@@ -6,8 +6,13 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 17:46:52 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/07 17:51:44 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/08 16:01:20 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+
+}

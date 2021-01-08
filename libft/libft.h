@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 17:38:36 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/07 17:49:52 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/08 15:43:07 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 int				ft_strlen(char *str);
 int				ft_isalpha(char c);
 int				ft_isdigit(char c);
+void			*ft_bzero(void *s, size_t n);
 
 typedef struct	s_list
 {

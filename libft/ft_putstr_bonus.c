@@ -6,11 +6,11 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 17:55:10 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/08 17:56:45 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/09 12:05:34 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
 void	ft_putstr(char *str)
 {

@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 17:38:36 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/15 18:08:18 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/15 18:41:55 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,23 @@
 # include <unistd.h>
 
 int				ft_strlen(char const *str);
-int				ft_isalpha(int c);
+int				ft_isalnum(int c);
 int				ft_isdigit(int c);
 int				ft_isascii(int c);
 int				ft_isalpha(int c);
 int				ft_isprint(int c);
-char			*ft_itoa(int n);
+int				ft_memcmp(const void *s1, const void *s2, size_t n);
 int				ft_atoi(const char *str);
+char			*ft_strdup(char *src);
+char			*ft_itoa(int n);
+void			*ft_memchr(const void *s, int c, size_t n);
 void			*ft_calloc(size_t nmemb, size_t size);
 void			*ft_bzero(void *s, size_t n);
 void			*ft_memset(void *s, int c, size_t n);
 void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
+void			*ft_memcpy(void *dst, const void *src, size_t n);
+void			*ft_memmove(void *dst, const void *src, size_t n);
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size); 
 
 typedef struct	s_list
 {

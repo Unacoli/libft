@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 18:28:49 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/15 13:15:55 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/15 13:53:59 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		return (dst);
 	while (i < n)
 	{
-		dst2[i] = src[i];
+		dst2[i] = src2[i];
 		i++;
 	}
 	return (dst);

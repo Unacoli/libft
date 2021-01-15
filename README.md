@@ -1,1 +1,1 @@
-# School-42
+# libft

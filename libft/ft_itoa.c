@@ -6,10 +6,13 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 18:05:55 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/15 18:01:13 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/15 18:07:54 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n);
+char	*ft_itoa(int n)
+{
+
+}

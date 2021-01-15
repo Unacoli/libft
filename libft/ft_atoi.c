@@ -6,7 +6,7 @@
 /*   By: nargouse <nargouse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 13:17:41 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/07 17:51:19 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/15 12:04:00 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,8 @@ int	ft_atoi(char *str)
 			|| str[i] == '\v' || str[i] == '\f')
 		i++;
 	s = 1;
-	while (str[i] < '0' || s > '9')
-	{
-		if (str[i] == '-')
-			s = -s;
-		if (str[i] != '-' && str[i] != '+')
-			return (0);
-		i++;
-	}
+	if (str[i] == '-')
+		s = -s;
 	while (str[i] <= '9' && str[i] >= '0')
 	{
 		n = n * 10 + (str[i] - '0');

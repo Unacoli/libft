@@ -6,11 +6,11 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 17:37:42 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/07 17:40:08 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/15 17:58:47 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strdup(char *src)
 {

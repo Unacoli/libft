@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 17:40:46 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/07 17:51:31 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/15 17:20:30 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,6 @@
 
 void	*ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		((char*)s[i] = 0;
-		i++;
-	}
+	ft_memset(s, 0, n);
 	return (s);
 }

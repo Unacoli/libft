@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 18:29:21 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/08 17:14:56 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/15 17:15:02 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	int	i;
+	size_t	i;
+	char	*ptr;
 
 	i = 0;
+	ptr = (char *)s;
 	while (i < n)
 	{
-		s[i] = c;
+		ptr[i] = (char)c;
 		i++;
 	}
 	return (s);

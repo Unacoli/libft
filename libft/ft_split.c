@@ -6,13 +6,13 @@
 /*   By: nargouse <nargouse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 13:18:41 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/07 17:35:51 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/15 16:59:42 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str);
+#include "libft.h"
 
-int		ft_compare(char *s, char c)
+int		ft_compare(char const *s, char c)
 {
 	int i;
 	int charset_size;
@@ -73,12 +73,12 @@ char	**ft_split(char const *s, char c)
 
 	row = 0;
 	i = 0;
-	size = ft_strlen(str);
-	if (rtrn_str = (char**)malloc(sizeof(char*) * (ft_strlen(str) + 1)) == NULL)
+	size = 1;
+	if ((rtrn_str = (char**)malloc(sizeof(char*) * (ft_strlen(s) + 1))) == NULL)
 		return (NULL);
 	while (i < size)
 	{
-		if (ft_compare(&str[i], c) == 0)
+		if (ft_compare(&s[i], c) == 0)
 			i++;
 		else
 		{

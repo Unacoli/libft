@@ -6,13 +6,13 @@
 /*   By: nargouse <nargouse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 13:17:41 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/15 12:04:00 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/15 17:34:57 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	n;
 	int	s;

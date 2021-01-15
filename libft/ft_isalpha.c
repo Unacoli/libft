@@ -6,13 +6,13 @@
 /*   By: nargouse <nargouse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 13:22:36 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/07 18:04:23 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/15 17:49:02 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	return ((c > 'A' && c < 'Z') || (c > 'a' && c < 'z'));
 }

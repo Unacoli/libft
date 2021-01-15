@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 17:46:52 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/08 17:10:29 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/15 17:38:47 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,13 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char *str;
 
-	if (!(str = malloc(nmemb * size)))
-		return (0);
-	ft_memset(str, 0, (nmemb * size));
+	if (nmemb == 0 || size == 0)
+	{
+		nmemb = 1;
+		size = 1;
+	}
+	if ((str = malloc(nmemb *size)) == NULL)
+		return (NULL);
+	ft_bzero(str, nmemb *size);
 	return (str);
 }

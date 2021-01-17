@@ -6,27 +6,31 @@
 /*   By: nargouse <nargouse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 13:22:16 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/07 13:22:21 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/17 15:33:55 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	c;
+	size_t	i;
+	size_t	c;
 
 	i = 0;
 	c = 0;
+	if (!dst || !src)
+		return (0);
 	while (src[c] != '\0')
 		c++;
 	if (size > 0)
 	{
 		while (src[i] != '\0' && i < (size - 1))
 		{
-			dest[i] = src[i];
+			dst[i] = src[i];
 			i++;
 		}
-		dest[i] = '\0';
+		dst[i] = '\0';
 	}
 	return (c);
 }

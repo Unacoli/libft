@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strchrnul_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/07 18:04:39 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/17 14:47:43 by nargouse         ###   ########.fr       */
+/*   Created: 2021/01/17 15:17:26 by nargouse          #+#    #+#             */
+/*   Updated: 2021/01/17 15:19:42 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-int	ft_isascii(int c)
+char	*ft_strchrnul(const char *s, int c)
 {
-	return (c >= 0 && c <= 127);
+	int	i;
+
+	i = 0;
+	if (c == 0)
+	{
+		while (s[i])
+			i++;
+		return ((char *)s + i);
+	}
+	while (s[i])
+	{
+		if (s[i] == c)
+			return ((char *)s + i);
+		i++;
+	}
+	return (s[i]);
 }

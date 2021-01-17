@@ -6,8 +6,13 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 18:46:06 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/07 18:46:16 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/17 16:47:57 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	ft_putchar_fd(char c, int fd)
+{
+
+}

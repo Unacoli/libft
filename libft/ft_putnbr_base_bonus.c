@@ -6,13 +6,13 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 12:07:44 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/09 12:08:25 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/22 12:24:24 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_bonus.h"
 
-int		ft_error_base(char *base, int l_base)
+static int		ft_error_base(char *base, int l_base)
 {
 	int i;
 	int j;
@@ -41,7 +41,7 @@ int		ft_error_base(char *base, int l_base)
 	return (1);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+void			ft_putnbr_base(int nbr, char *base)
 {
 	int	l_base;
 

@@ -6,7 +6,7 @@
 /*   By: nargouse <nargouse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 13:20:01 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/17 16:36:41 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/22 15:45:57 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,29 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
+	char	*result;
+	int 	total_length;
+	int		i;
+	int		j;
 
+	total_length = ft_strlen(s1) + ft_strlen(s2);
+	i = 0;
+	j = 0;
+	if (!(result = (char *)malloc(sizeof(char *) * (total_length + 1))))
+		return (NULL);
+	while (s1[j])
+	{
+		result[i] = s1[j];
+		i++;
+		j++;
+	}
+	j = 0;
+	while (s2[j])
+	{
+		result[i] = s2[j];
+		i++;
+		j++;
+	}
+	result[i] = '\0'
+	return (result);
 }

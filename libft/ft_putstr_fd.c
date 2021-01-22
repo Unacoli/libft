@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/17 16:48:06 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/17 16:48:32 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/22 16:35:53 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-
+	if (!(s) || fd < 0)
+		return ;
+	write (fd, s, ft_strlen(s));
 }

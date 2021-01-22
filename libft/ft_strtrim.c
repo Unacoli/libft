@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/17 16:37:04 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/22 16:18:36 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/22 16:26:39 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 	len_end = ft_end(s1, set);
 	if (len_start >= len_end)
 		return (ft_strdup(""));
-	if(!(result = (char *)malloc(sizeof(char) * (end - start + 1))))
+	if(!(result = (char *)malloc(sizeof(char) * (len_end - len_start + 1))))
 		return (NULL);
-	ft_strlcpy(result, s1 + len_start, end - start + 1);
+	ft_strlcpy(result, s1 + len_start, len_end - len_start + 1);
 	return (result);
 }

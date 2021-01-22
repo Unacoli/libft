@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 17:38:36 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/22 13:17:46 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/22 16:30:25 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int				ft_toupper(int c);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 int				ft_atoi(const char *str);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
-char			*ft_strdup(char *src);
+char			*ft_strdup(const char *src);
 char			*ft_itoa(int n);
 char			*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char			*ft_strrchr(const char *s, int c);

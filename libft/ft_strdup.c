@@ -6,13 +6,13 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 17:37:42 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/15 17:58:47 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/22 16:36:14 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	char	*ptr;
 	int		i;

@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchrnul_bonus.c                               :+:      :+:    :+:   */
+/*   ft_convert_base2_bonus.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/17 15:17:26 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/28 15:12:30 by nargouse         ###   ########.fr       */
+/*   Created: 2021/01/09 12:16:20 by nargouse          #+#    #+#             */
+/*   Updated: 2021/01/28 15:39:36 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-char	*ft_strchrnul(const char *s, int c)
+char	*ft_convert_base(const char *nbr, const char *base_from, const char *base_to)
 {
-	int	i;
+	int		nb;
+	char	*num;
 
-	i = 0;
-	if (c == 0)
-	{
-		while (s[i])
-			i++;
-		return ((char *)s + i);
-	}
-	while (s[i])
-	{
-		if (s[i] == c)
-			return ((char *)s + i);
-		i++;
-	}
-	return (s[i]);
+	if (!ft_check_base(base_from) || !ft_check_base(base_to))
+		return (0);
+	nb = ft_atoi_base(nbr, base_from);
+	num = ft_itoa_base(nb, base_to);
+	return (num);
 }

@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchrnul_bonus.c                               :+:      :+:    :+:   */
+/*   ft_isinbase_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/17 15:17:26 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/28 15:12:30 by nargouse         ###   ########.fr       */
+/*   Created: 2021/01/28 15:16:05 by nargouse          #+#    #+#             */
+/*   Updated: 2021/01/28 15:17:43 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchrnul(const char *s, int c)
+int	ft_isinbase(char c, char *base)
 {
 	int	i;
 
 	i = 0;
-	if (c == 0)
+	while (base[i])
 	{
-		while (s[i])
-			i++;
-		return ((char *)s + i);
-	}
-	while (s[i])
-	{
-		if (s[i] == c)
-			return ((char *)s + i);
+		if ((base[i] == c)
+				return (i);
 		i++;
 	}
-	return (s[i]);
+	return (-1);
 }

@@ -6,12 +6,12 @@
 #    By: nargouse <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/07 14:54:05 by nargouse          #+#    #+#              #
-#    Updated: 2021/01/22 16:43:01 by nargouse         ###   ########.fr        #
+#    Updated: 2021/01/28 16:03:16 by nargouse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libft.a
-INCLUDES = ./
+INCLUDES = ./libft.h
 CFLAGS	+= -Wall -Werror -Wextra
 SRC		= ft_isalpha.c ft_memcmp.c ft_strlcat.c ft_substr.c \
 		  ft_atoi.c ft_isascii.c ft_memcpy.c ft_putnbr_fd.c \
@@ -23,9 +23,7 @@ SRC		= ft_isalpha.c ft_memcmp.c ft_strlcat.c ft_substr.c \
 		  ft_memccpy.c ft_putendl_fd.c ft_strdup.c ft_strrchr.c ft_isalnum.c \
 		  ft_memchr.c ft_strjoin.c ft_strtrim.c
 SRCS	= ft_lstnew.c ft_lstadd_front.c ft_lstsize ft_lstlast ft_lstadd_back \
-		  ft_lstdelone ft_lstclear ft_lstiter ft_lstmap ft_atoi_base_bonus.c \
-		  ft_convert_base1_bonus.c ft_convert_base2_bonus.c ft_putchar_bonus.c \
-		  ft_strchrnul_bonus.c ft_putnbr_bonus.c ft_putnbr_base_bonus.c \
+		  ft_lstdelone ft_lstclear ft_lstiter ft_lstmap \
 		  ft_lstlast.c
 OBJ		= $(SRC:.c=.o)
 OBJS	= $(SRCS:.c=.o)
@@ -40,11 +38,11 @@ $(NAME):
 
 bonus:
 	@gcc -g $(CFLAGS) -I $(INCLUDES) -c $(SRCS)
-	@ar rc $(NAME) $(OBJ)
+	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
 
 clean:
-		${RM} ${OBJ}
+		${RM} ${OBJ} ${OBJS}
 
 fclean:	clean
 		${RM} ${NAME}

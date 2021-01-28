@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchrnul_bonus.c                               :+:      :+:    :+:   */
+/*   ft_itoa_base_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/17 15:17:26 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/28 15:12:30 by nargouse         ###   ########.fr       */
+/*   Created: 2021/01/28 15:33:36 by nargouse          #+#    #+#             */
+/*   Updated: 2021/01/28 15:34:52 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchrnul(const char *s, int c)
+char	*ft_itoa_base(int nb, const char *base)
 {
-	int	i;
+	int				index;
+	unsigned int	nbr;
+	char			num[67];
 
-	i = 0;
-	if (c == 0)
+	nbr = nb;
+	index = 65;
+	num[66] = 0;
+	num[65] = base[0];
+	if (nb < 0)
+		nbr = nb * -1;
+	while (nbr > 0)
 	{
-		while (s[i])
-			i++;
-		return ((char *)s + i);
+		num[index--] = base[nbr % ft_check_base(base)];
+		nbr /= ft_check_base(base);
 	}
-	while (s[i])
-	{
-		if (s[i] == c)
-			return ((char *)s + i);
-		i++;
-	}
-	return (s[i]);
+	if (nb < 0)
+		num[index] = '-';
+	else if (nb != 0)
+		index++;
+	return (ft_strdup(&num[index]));
 }

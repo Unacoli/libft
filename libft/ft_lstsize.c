@@ -6,8 +6,23 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 18:27:18 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/07 18:27:32 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/01/28 17:26:12 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_lstsize(t_list *lst)
+{
+	int		i;
+	t_list	*ptr;
+
+	i = 0;
+	ptr = lst;
+	while (ptr != NULL)
+	{
+		ptr = ptr->next;
+		i++;
+	}
+	return (i);
+}

@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 12:07:44 by nargouse          #+#    #+#             */
-/*   Updated: 2021/02/01 16:11:57 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/02/01 17:10:31 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,5 @@ void			ft_putnbr_base(int nbr, char *base)
 	l_base = ft_strlen(base);
 	if (ft_error_base(base, l_base) == 0)
 		return ;
-	ft_putnbr(nbr, l_base, base);
+	ft_putnbr(nbr);
 }

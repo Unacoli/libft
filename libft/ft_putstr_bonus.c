@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 17:55:10 by nargouse          #+#    #+#             */
-/*   Updated: 2021/02/01 16:07:04 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/02/01 17:12:31 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,5 @@
 
 void	ft_putstr(char *str)
 {
-	int i;
-
-	i = 0;
-	while (str[i])
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
+	ft_putstr_fd(str, 1);
 }

@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 17:38:36 by nargouse          #+#    #+#             */
-/*   Updated: 2021/02/01 16:15:58 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/02/01 17:13:24 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	**ft_split(char const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_convert_base(const char *nbr, char *b_from, char *b_to);
 
-void	ft_putnbr(int nbr, int l_base, char *base);
+void	ft_putnbr(int n);
 void	ft_putnbr_base(int nbr, char *base);
 void	ft_putchar(char c);
 void	ft_putstr(char *str);

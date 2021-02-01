@@ -6,11 +6,11 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 12:06:56 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/09 12:07:34 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/02/01 16:11:01 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 void	ft_putnbr(int nbr, int l_base, char *base)
 {

@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/17 15:17:26 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/28 15:12:30 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/02/01 16:17:08 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ char	*ft_strchrnul(const char *s, int c)
 			return ((char *)s + i);
 		i++;
 	}
-	return (s[i]);
+	return ((char *)s);
 }

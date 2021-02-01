@@ -6,7 +6,7 @@
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 15:16:05 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/28 15:17:43 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/02/01 16:06:37 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_isinbase(char c, char *base)
 	i = 0;
 	while (base[i])
 	{
-		if ((base[i] == c)
+		if (base[i] == c)
 				return (i);
 		i++;
 	}

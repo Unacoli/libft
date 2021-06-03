@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_check_base_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/17 16:45:33 by nargouse          #+#    #+#             */
-/*   Updated: 2021/06/03 17:02:39 by nargouse         ###   ########.fr       */
+/*   Created: 2021/01/28 15:32:14 by nargouse          #+#    #+#             */
+/*   Updated: 2021/06/03 16:41:33 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+int	ft_check_base(const char *base)
 {
-	char			*result;
-	unsigned int	i;
-	unsigned int	len;
+	int	i;
+	int	j;
 
-	if (!s || !f)
-		return (NULL);
-	len = ft_strlen(s);
 	i = 0;
-	result = (char *)malloc(sizeof(char) * (len + 1));
-	if (!(result))
-		return (NULL);
-	while (i < len)
+	j = 1;
+	while (base[i])
 	{
-		result[i] = (*f)(i, s[i]);
+		while (base[j])
+		{
+			if (base[i] == base[j] || (base[j] >= 9 && base[j] <= 13)
+				|| base[j] == 32 || base[j] == '+' || base[j] == '-')
+				return (0);
+			j++;
+		}
 		i++;
+		j = i + 1;
 	}
-	result[i] = '\0';
-	return (result);
+	if (i <= 1)
+		return (0);
+	return (i);
 }

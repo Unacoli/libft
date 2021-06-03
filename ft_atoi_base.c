@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_atoi_base_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/17 16:45:33 by nargouse          #+#    #+#             */
-/*   Updated: 2021/06/03 17:02:39 by nargouse         ###   ########.fr       */
+/*   Created: 2021/01/09 12:17:21 by nargouse          #+#    #+#             */
+/*   Updated: 2021/06/03 16:32:17 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+int	ft_atoi_base(const char *str, char *base)
 {
-	char			*result;
-	unsigned int	i;
-	unsigned int	len;
+	int		index;
+	int		sign;
+	int		num;
 
-	if (!s || !f)
-		return (NULL);
-	len = ft_strlen(s);
-	i = 0;
-	result = (char *)malloc(sizeof(char) * (len + 1));
-	if (!(result))
-		return (NULL);
-	while (i < len)
+	sign = 1;
+	index = 0;
+	num = 0;
+	while (ft_isspace(str[index]))
+		index++;
+	while (str[index] == '-' || str[index] == '+')
+		if (str[index++] == '-')
+			sign *= -1;
+	while (ft_isinbase(str[index], base) >= 0)
 	{
-		result[i] = (*f)(i, s[i]);
-		i++;
+		num *= ft_check_base(base);
+		num += sign * ft_isinbase(str[index], base);
+		index++;
 	}
-	result[i] = '\0';
-	return (result);
+	return (num);
 }

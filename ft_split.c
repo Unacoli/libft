@@ -6,13 +6,13 @@
 /*   By: nargouse <nargouse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 13:18:41 by nargouse          #+#    #+#             */
-/*   Updated: 2021/01/26 14:31:00 by nargouse         ###   ########.fr       */
+/*   Updated: 2021/06/03 17:08:10 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char			**ft_allocation_error(char **tab)
+static char	**ft_allocation_error(char **tab)
 {
 	unsigned int	i;
 
@@ -53,7 +53,7 @@ static unsigned int	ft_get_nb_str(char const *s, char c)
 	return (nb_str);
 }
 
-static void			get_nextstr(char **next, unsigned int *nextlen, char c)
+static void	get_nextstr(char **next, unsigned int *nextlen, char c)
 {
 	unsigned int	i;
 
@@ -71,7 +71,7 @@ static void			get_nextstr(char **next, unsigned int *nextlen, char c)
 	}
 }
 
-char				**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char			**tab;
 	char			*next_str;
@@ -82,7 +82,8 @@ char				**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	nb_str = ft_get_nb_str(s, c);
-	if (!(tab = (char **)malloc(sizeof(char *) * (nb_str + 1))))
+	tab = (char **)malloc(sizeof(char *) * (nb_str + 1));
+	if (!(tab))
 		return (NULL);
 	i = 0;
 	next_str = (char *)s;
@@ -90,7 +91,8 @@ char				**ft_split(char const *s, char c)
 	while (i < nb_str)
 	{
 		get_nextstr(&next_str, &next_str_len, c);
-		if (!(tab[i] = (char *)malloc(sizeof(char) * (next_str_len + 1))))
+		tab[i] = (char *)malloc(sizeof(char) * (next_str_len + 1));
+		if (!(tab[i]))
 			return (ft_allocation_error(tab));
 		ft_strlcpy(tab[i], next_str, next_str_len + 1);
 		i++;

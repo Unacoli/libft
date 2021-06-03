@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_isinbase_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nargouse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/17 16:45:33 by nargouse          #+#    #+#             */
-/*   Updated: 2021/06/03 17:02:39 by nargouse         ###   ########.fr       */
+/*   Created: 2021/01/28 15:16:05 by nargouse          #+#    #+#             */
+/*   Updated: 2021/06/03 16:42:33 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+int	ft_isinbase(char c, char *base)
 {
-	char			*result;
-	unsigned int	i;
-	unsigned int	len;
+	int	i;
 
-	if (!s || !f)
-		return (NULL);
-	len = ft_strlen(s);
 	i = 0;
-	result = (char *)malloc(sizeof(char) * (len + 1));
-	if (!(result))
-		return (NULL);
-	while (i < len)
+	while (base[i])
 	{
-		result[i] = (*f)(i, s[i]);
+		if (base[i] == c)
+			return (i);
 		i++;
 	}
-	result[i] = '\0';
-	return (result);
+	return (-1);
 }

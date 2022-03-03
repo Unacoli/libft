@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_quit.c                                          :+:      :+:    :+:   */
+/*   ft_print_str_tab.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nargouse <nargouse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/29 18:32:32 by nargouse          #+#    #+#             */
-/*   Updated: 2022/02/28 20:03:49 by nargouse         ###   ########.fr       */
+/*   Created: 2022/02/28 18:55:37 by nargouse          #+#    #+#             */
+/*   Updated: 2022/02/28 19:14:54 by nargouse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_quit(char *message)
+void	ft_print_str_tab(char **tab)
 {
-	ft_putstr_fd("Error\n", STDERR_FILENO);
-	ft_putstr_fd(message, STDERR_FILENO);
-	exit(EXIT_FAILURE);
+	int	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		ft_putendl_fd(tab[i], 1);
+		i++;
+	}
 }

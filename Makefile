@@ -6,13 +6,13 @@
 #    By: nargouse <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/07 14:54:05 by nargouse          #+#    #+#              #
-#    Updated: 2022/01/29 20:33:25 by nargouse         ###   ########.fr        #
+#    Updated: 2022/03/02 15:04:57 by nargouse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libft.a
 INCLUDE = ./include/
-CFLAGS	+= -Wall -Werror -Wextra -DLINUX
+CFLAGS	+= -Wall -Werror -Wextra
 
 FILES	= ft_atoi.c ft_lstsize.c ft_strlcat.c ft_bzero.c ft_memccpy.c\
 		ft_strlcpy.c ft_calloc.c ft_memchr.c ft_strlen.c ft_free.c\
@@ -27,7 +27,7 @@ FILES	= ft_atoi.c ft_lstsize.c ft_strlcat.c ft_bzero.c ft_memccpy.c\
 		ft_strdup.c ft_lstlast.c ft_strichr.c ft_lstmap.c ft_strjoin.c\
 		ft_lstnew.c ft_strjoin_free.c ft_int_error.c ft_flag_c.c\
         ft_flag_diu.c ft_flag_p.c ft_flag_pourcent.c ft_flag_s.c ft_flag_x.c\
-        ft_printf.c
+        ft_printf.c ft_quit.c ft_print_str_tab.c ft_free_tab.c
 
 SRCS    = $(addprefix ./srcs/, $(FILES))
 OBJS	= $(addprefix ./objs/, $(FILES:.c=.o))
